@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QUIZ TIME - выберите QUIZ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
     <header class="header">
@@ -46,6 +48,30 @@
         </div>
 
         <div class="main__box main__box-question">
+            <form class="main__form-question" data-count="1/10">
+                <fieldset>
+                    <legend class="main__subtitle">Какие типы input корректны?</legend>
+                    <label class="answer">
+                        <input type="checkbox" class="answer__checkbox" name="answer">text
+                    </label>
+
+                    <label class="answer">
+                        <input type="checkbox" class="answer__checkbox" name="answer">color
+                    </label>
+
+                    <label class="answer">
+                        <input type="checkbox" class="answer__checkbox" name="answer">week
+                    </label>
+
+                    <label class="answer">
+                        <input type="checkbox" class="answer__checkbox" name="answer">day
+                    </label>
+                </fieldset>
+                <button class="main__btn question__next">Подтвердить</button>
+            </form>
+        </div>
+
+        <div class="main__box main__box-question">
             <form class="main__form-question" data-count="2/10">
                 <fieldset>
                     <legend class="main__subtitle">Какая столица является родиной демократии?</legend>
@@ -64,8 +90,6 @@
                     <label class="answer">
                         <input type="radio" class="answer__radio" name="answer">Вашингтон
                     </label>
-
-
                 </fieldset>
                 <button class="main__btn question__next">Подтвердить</button>
             </form>
