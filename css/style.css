@@ -164,7 +164,7 @@ button {
     text-align: left;
     border: none;
     padding: 16px 20px;
-    transition-property: background;
+    transition-property: background, color;
     transition-duration: 0.24s;
     transition-timing-function: ease-in-out;
 }
@@ -174,7 +174,8 @@ button {
 }
 
 .selection__theme:hover {
-    background: rgb(132, 255, 249);
+    background: #296c82;
+    color: #fff;
 }
 
 .selection__result {
@@ -254,8 +255,8 @@ button {
 .answer__checkbox::after {
     content: '';
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 15x;
+    left: 12px;
     height: 8px;
     width: 17px;
     border: 2px solid #434343;
