@@ -112,9 +112,9 @@ button {
     color: #296c82;
     display: block;
     margin: 0 auto;
-    transition-property: background-color, color;
+    /*transition-property: background-color, color;
     transition-duration: 0.24s;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;*/
 }
 
 .main__btn:hover {
@@ -174,7 +174,7 @@ button {
 }
 
 .selection__theme:hover {
-    background: darkslateblue;
+    background: rgb(132, 255, 249);
 }
 
 .selection__result {
@@ -219,15 +219,17 @@ button {
 }
 
 .answer {
-    position: absolute;
+    position: relative;
     display: block;
     margin-bottom: 26px;
     font-weight: 600;
     font-size: 18px;
     line-height: 40px;
+    padding-left: 65px;
 }
 
 .answer__checkbox {
+    position: absolute;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
