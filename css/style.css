@@ -66,7 +66,7 @@ button {
     color: #fff;
     font-weight: 900;
     font-size: 30px;
-    text-transform: lowercase;
+    text-transform: uppercase;
 }
 
 .main {
@@ -110,6 +110,8 @@ button {
     font-weight: 600;
     font-size: 18px;
     color: #296c82;
+    display: block;
+    margin: 0 auto;
 }
 
 .selection {
@@ -121,6 +123,18 @@ button {
     flex-direction: column;
     overflow-y: auto;
     max-height: 100%;
+    scrollbar-color: rgb(140, 140, 140 0.1);
+    scrollbar-width: thin;
+}
+
+.selection__list::-webkit-scrollbar {
+    width: 6px;
+    
+}
+
+.selection__list::-webkit-scrollbar-thumb {
+    background-color: rgb(140, 140, 140 0.1);
+    border-radius: 8px;
 }
 
 .selection__item {
@@ -150,7 +164,7 @@ button {
 }
 
 .selection__result {
-    max-width: 63px;
+    width: min-content;
 }
 
 .selection__result-ratio {
@@ -168,4 +182,42 @@ button {
     font-size: 12px;
     line-height: 110%;
     color: #8c8c8c;
+}
+
+.main__box-question {
+    padding: 60px 120px;
+    height: auto;
+    min-height: 540px;
+}
+
+.main__form-question {
+    position: relative;
+}
+
+.main__form-question::after {
+    content: attr(data-count);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 300;
+    font-size: 18px;
+    color: #8c8c8c;
+}
+
+.answer {
+    position: absolute;
+    display: block;
+    margin-bottom: 26px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.answer__checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0 -65px;
 }
