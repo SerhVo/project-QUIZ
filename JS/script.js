@@ -1,6 +1,6 @@
 'use strict';
-
-const main =document.querySelector('.main');
+const main = document.querySelector('.main');
+const title = document.querySelector('.main__title');
 const selection = document.querySelector('.selection');
 
 const getData = () => {
@@ -115,27 +115,84 @@ const getData = () => {
         }
     ];
     return dataBase;
-}
+};
+
+const hideElem = () => {
+    let opacity = getComputedStyle(Elem).getPropertyValue('opacity');
+
+    const animation = () => {
+        opacity -=0.05;
+        elem.style.opacity = opacity;
+
+        if (opacity > 0) {
+            requestAnimationFrame(animation);
+        } else {
+            elem.style.display = 'none';
+        }
+    };
+    requestAnimationFrame(animation);
+};
 
 const renderTheme = Themes => {
     const list = document.querySelector('.selection__list');
     list.textContent = '';
 
+    const button = [];
+
     for (let i = 0; i < themes.length; i += 1) {
-        list.innerHTML += `
+        const li = document.createElement('li');
+        li.className = 'selection__item';
+
+        const button = document.createElement('button');
+        button.className = 'selection__theme';
+        button.dataset.id = themes[i].id;
+        button.textContent = themes[i].theme;
+
+        li.append(button);
+
+        list.append(li);
+
+        buttons.push(button);
+
+        /*list.innerHTML += `
         <li class="selection__item">
         <button class="selection__theme">${themes[i].themes}</button>
         </li>
-        `;
+        `;*/
     }
     
-}
+    return buttons;
+
+};
+
+const renderQuiz = quiz => {
+    hideElem(title);
+    hideElem(selection);
+
+    const questionBox = document.createElement('div');
+    questionBox.className = 'main__box main__box-question';
+
+    main.append(questionBox)
+};
+
+const addClick = (buttons, data) => {
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const quiz = data.find(item => item.id === btn.dataset.id);
+            renderQuiz(quiz);
+            
+        });
+    })
+}; 
 
 const initQuiz = () => {
 
     const data = getData();
 
-    renderTheme(data);
+    const buttons = renderTheme(data);
+
+    addClick(buttons, data);
+
 };
 
 initQuiz();
