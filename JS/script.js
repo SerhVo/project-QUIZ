@@ -139,7 +139,7 @@ const renderTheme = themes => {
     const list = document.querySelector('.selection__list');
     list.textContent = '';
 
-    const button = [];
+    const buttons = [];
 
     for (let i = 0; i < themes.length; i += 1) {
         const li = document.createElement('li');
@@ -149,7 +149,6 @@ const renderTheme = themes => {
         button.className = 'selection__theme';
         button.dataset.id = themes[i].id;
         button.textContent = themes[i].theme;
-
         li.append(button);
         list.append(li);
 
