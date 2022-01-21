@@ -118,7 +118,7 @@ const getData = () => {
     return dataBase;
 };
 
-const hideElem = () => {
+const hideElem = elem => {
     let opacity = getComputedStyle(elem).getPropertyValue('opacity');
 
     const animation = () => {
@@ -217,8 +217,8 @@ const renderQuiz = quiz => {
 
         questionBox.append(form);
 
-        form.addEventListener('submit', () => {
-            
+        form.addEventListener('submit', event => {
+            event.preventDefault();
             let ok = false;
             const answer = form.answer = [...form.answer].map(input => {
                 if (input.checked) ok = true;
@@ -228,7 +228,7 @@ const renderQuiz = quiz => {
             if (ok) {
                 console.log(answer);
             } else {
-                console.error('не выбран ни один ответ!');
+                console.warn('не выбран ни один ответ!');
             }
         })
     };
