@@ -1,5 +1,4 @@
 'use strict';
-
 const main = document.querySelector('.main');
 const title = document.querySelector('.main__title');
 const selection = document.querySelector('.selection');
@@ -8,7 +7,7 @@ const getData = () => {
     const dataBase = [
         {
             id: '01',
-            theme: 'тема01',
+            Theme: 'тема01',
             result: [
                 [40, 'Есть задатки, нужно развиваться'],
                 [80, 'Очень хорошо, но есть пробелы'],
@@ -17,55 +16,55 @@ const getData = () => {
             list: [
                 {
                     type: 'checkbox',
-                    question: 'Вопрос1',
-                    answers: ['правильный1', 'правильный2', 'неправильный', 'неправильный2'],
-                    correct: 2,
+                    question: 'Вопрос',
+                    answers: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
+                ,correct: 2,
                 },
                 {
                     type: 'radio',
-                    question: 'Вопрос2',
-                    answers: ['правильный', 'неправильный', 'неправильный', 'неправильный2'],
+                    question: 'Вопрос',
+                    answers: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
                 },
                 {
                     type: 'checkbox',
-                    question: 'Вопрос3',
-                    answers: ['правильный1', 'правильный2', 'неправильный', 'неправильный2'],
-                correct: 2,
+                    question: 'Вопрос',
+                    answers: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
+                ,correct: 2,
                 },
                 {
                     type: 'radio',
-                    question: 'Вопрос4',
-                    answers: ['правильный', 'неправильный', 'неправильный', 'неправильный2'],
+                    question: 'Вопрос',
+                    answers: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
                 },
                 {
                     type: 'checkbox',
-                    question: 'Вопрос5',
-                    answers: ['правильный', 'правильный2', 'неправильный', 'неправильный2'],
-                correct: 2,
+                    question: 'Вопрос',
+                    answers: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
+                ,correct: 2,
                 },
                 {
                     type: 'checkbox',
-                    question: 'Вопрос6',
-                    answers: ['правильный', 'неправильный', 'неправильный', 'неправильный2'],
-                correct: 1,
+                    question: 'Вопрос',
+                    answers: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
+                ,correct: 1,
                 },
                 {
                     type: 'checkbox',
-                    question: 'Вопрос7',
-                    answers: ['правильный1', 'правильный2', 'правильный3', 'неправильный2'],
-                correct: 3,
+                    question: 'Вопрос',
+                    answers: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
+                ,correct: 3,
                 },
                 {
                     type: 'checkbox',
-                    question: 'Вопрос8',
-                    answers: ['правильный', 'правильный2', 'неправильный', 'неправильный2'],
-                correct: 2,
+                    question: 'Вопрос',
+                    answers: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
+                ,correct: 2,
                 },
             ]
         },
         {
             id: '02',
-            theme: 'тема02',
+            Theme: 'тема02',
             result: [
                 [30, 'Есть задатки, нужно развиваться'],
                 [60, 'Очень хорошо, но есть пробелы'],
@@ -75,54 +74,54 @@ const getData = () => {
                 {
                     type: 'radio',
                     question: 'Вопрос',
-                    answers: ['правильный', 'неправильный', 'неправильный', 'неправильный2'],
+                    answer: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
                 },
                 {
                     type: 'radio',
                     question: 'Вопрос',
-                    answers: ['правильный', 'неправильный', 'неправильный', 'неправильный2'],
+                    answer: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
                 },
                 
                 {
                     type: 'radio',
                     question: 'Вопрос',
-                    answers: ['правильный', 'неправильный', 'неправильный', 'неправильный2'],
+                    answer: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
                 },
                 {
                     type: 'checkbox',
                     question: 'Вопрос',
-                    answers: ['правильный1', 'правильный2', 'неправильный', 'неправильный2'],
-                correct: 2,
+                    answer: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
+                ,correct: 2,
                 },
                 {
                     type: 'checkbox',
                     question: 'Вопрос',
-                    answers: ['правильный', 'неправильный', 'неправильный', 'неправильный2'],
-                correct: 1,
+                    answer: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
+                ,correct: 1,
                 },
                 {
                     type: 'checkbox',
                     question: 'Вопрос',
-                    answers: ['правильный1', 'правильный2', 'правильный3', 'неправильный2'],
-                correct: 3,
+                    answer: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
+                ,correct: 3,
                 },
                 {
                     type: 'checkbox',
                     question: 'Вопрос',
-                    answers: ['правильный1', 'правильный2', 'неправильный', 'неправильный2'],
-                correct: 2,
-                }
+                    answer: ['правильный', 'правильный2', 'неправильный', 'неправильный2']
+                ,correct: 2,
+                },
             ]
         }
     ];
     return dataBase;
 };
 
-const hideElem = elem => {
-    let opacity = getComputedStyle(elem).getPropertyValue('opacity');
+const hideElem = () => {
+    let opacity = getComputedStyle(Elem).getPropertyValue('opacity');
 
     const animation = () => {
-        opacity -= 0.05;
+        opacity -=0.05;
         elem.style.opacity = opacity;
 
         if (opacity > 0) {
@@ -131,15 +130,14 @@ const hideElem = elem => {
             elem.style.display = 'none';
         }
     };
-
     requestAnimationFrame(animation);
 };
 
-const renderTheme = themes => {
+const renderTheme = Themes => {
     const list = document.querySelector('.selection__list');
     list.textContent = '';
 
-    const buttons = [];
+    const button = [];
 
     for (let i = 0; i < themes.length; i += 1) {
         const li = document.createElement('li');
@@ -149,10 +147,18 @@ const renderTheme = themes => {
         button.className = 'selection__theme';
         button.dataset.id = themes[i].id;
         button.textContent = themes[i].theme;
+
         li.append(button);
+
         list.append(li);
 
         buttons.push(button);
+
+        /*list.innerHTML += `
+        <li class="selection__item">
+        <button class="selection__theme">${themes[i].themes}</button>
+        </li>
+        `;*/
     }
     
     return buttons;
@@ -169,7 +175,7 @@ const createAnswer = data => {
         const input = document.createElement('input');
         input.type = type;
         input.name = 'answer';
-        input.className = `answer__${type}`;
+        input.className = 'answer__${type}';
         const text = document.createTextNode(item);
 
         label.append(input, text);
@@ -204,21 +210,21 @@ const renderQuiz = quiz => {
         legend.className = 'main__subtitle';
         legend.textContent = data.question;
 
-        const answer = createAnswer(data);
+        const answers = createAnswer(data);
 
         const button = document.createElement('button');
         button.className = 'main__btn question__next';
         button.type = 'submit';
         button.textContent = 'Подтвердить';
-
         fieldset.append(legend, ...answers);
 
         form.append(fieldset, button);
 
         questionBox.append(form);
 
-        form.addEventListener('submit', event => {
-            event.preventDefault();
+        form.addEventListener('submit', function(e) {
+            e.preventDefaul();
+        }, false);
             let ok = false;
             const answer = form.answer = [...form.answer].map(input => {
                 if (input.checked) ok = true;
@@ -228,14 +234,14 @@ const renderQuiz = quiz => {
             if (ok) {
                 console.log(answer);
             } else {
-                console.warn('не выбран ни один ответ!');
+                console.error('не выбран ни один ответ!')
             }
-        })
+        ;
     };
 
-    showQuestion();
+    showQuestion ();
 
-};
+;
 
 const addClick = (buttons, data) => {
     buttons.forEach(btn => {
@@ -257,4 +263,4 @@ const initQuiz = () => {
 
 };
 
-initQuiz();
+initQuiz()};
